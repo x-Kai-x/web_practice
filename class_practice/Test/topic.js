@@ -1,6 +1,12 @@
-function myFun(){
-    myDate = document.myForm.date;
-}
+var month;
+var date;
+const LimitDate=31;
+do{
+month = prompt("請輸入月份", "01");
+}while(month>12||month<0);
+do{
+date = prompt("請輸入日期", "01");
+}while(date>31||date<0);
 
 var topic = [
     "尚未開學",
@@ -20,4 +26,4 @@ function setMonthAndDay(startMonth, startDay) {
     startDate.setSeconds(0);
 }
 
-setMonthAndDay(myDate.value[6], 12)
+setMonthAndDay(month,date);
